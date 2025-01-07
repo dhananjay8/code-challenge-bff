@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory for TypeScript files
+    "baseUrl": ".",
+    "paths": {
+      "@interfaces/*": ["src/interfaces/*"],
+      "@services/*": ["src/services/*"],
+      "@models/*": ["src/models/*"],
+      "@data/*": ["data/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "tests"]
+}
