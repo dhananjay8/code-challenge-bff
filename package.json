@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist src/**/*.js",
     "build": "npm run clean && tsc",
-    "start": "node dist/main.js",
+    "start": "ts-node -r tsconfig-paths/register src/app/main.ts",
     "test": "jest"
   },
   "keywords": [],
@@ -19,5 +19,8 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "tsconfig-paths": "^4.2.0"
   }
 }

@@ -5,11 +5,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "./dist", // Output directory for compiled files
-    "rootDir": "./src", // Root directory for TypeScript files
+    "outDir": "./dist",
+    "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
-      "@interfaces/*": ["src/interfaces/*"],
+      "@interfaces/*": ["src/core/interfaces/*"],
       "@services/*": ["src/services/*"],
       "@models/*": ["src/models/*"],
       "@data/*": ["data/*"]

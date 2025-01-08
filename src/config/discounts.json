@@ -1,0 +1,14 @@
+[
+  {
+    "type": "bulk",
+    "sku": "ipd",
+    "threshold": 4,
+    "discountedPrice": 499.99
+  },
+  {
+    "type": "bundle",
+    "sku": "atv",
+    "bundleSize": 3,
+    "priceForBundle": 2
+  }
+]
