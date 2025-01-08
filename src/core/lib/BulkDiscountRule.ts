@@ -1,11 +1,11 @@
-import { IPricingRule } from "../interfaces/IPricingRule";
-import { IDiscount } from "../interfaces/IDiscount";
+import { PricingRuleInterface } from "../interfaces/PricingRule";
+import { DiscountInterface } from "../interfaces/Discount";
 
-export class BulkDiscountRule implements IPricingRule {
+export class BulkDiscountRule implements PricingRuleInterface {
   apply(
     items: Record<string, number>,
     prices: Record<string, number>,
-    discount: IDiscount
+    discount: DiscountInterface
   ): number {
     const count = items[discount.sku] || 0;
     const price =

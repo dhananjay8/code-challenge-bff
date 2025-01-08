@@ -1,12 +1,15 @@
-import { IProduct } from "../core/interfaces/IProduct";
-import { IDiscount } from "../core/interfaces/IDiscount";
+import { ProductInterface } from "../core/interfaces/Product";
+import { DiscountInterface } from "../core/interfaces/Discount";
 import { PricingRuleService } from "./PricingRuleService";
 
 export class Checkout {
   private items: Record<string, number> = {};
   private products: Record<string, number> = {};
 
-  constructor(products: IProduct[], private discounts: IDiscount[]) {
+  constructor(
+    products: ProductInterface[],
+    private discounts: DiscountInterface[]
+  ) {
     for (const product of products) {
       this.products[product.sku] = product.price;
     }

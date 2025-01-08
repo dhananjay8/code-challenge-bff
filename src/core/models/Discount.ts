@@ -1,12 +1,12 @@
-import { IDiscount } from "../interfaces/IDiscount";
+import { DiscountInterface } from "../interfaces/Discount";
 
-export class Discount implements IDiscount {
+export class Discount implements DiscountInterface {
   constructor(
     public type: string,
     public sku: string,
     public threshold?: number,
     public discountedPrice?: number,
     public bundleSize?: number,
-    public priceForBundle?: number
+    public priceForBundleItems?: number
   ) {}
 }

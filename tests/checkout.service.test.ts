@@ -1,15 +1,15 @@
 import { Checkout } from "@services/Checkout";
-import { IProduct } from "@interfaces/IProduct";
-import { IDiscount } from "@interfaces/IDiscount";
+import { ProductInterface } from "@interfaces/Product";
+import { DiscountInterface } from "@interfaces/Discount";
 
-const products: IProduct[] = [
+const products: ProductInterface[] = [
   { sku: "ipd", name: "Super iPad", price: 10 },
   { sku: "mbp", name: "MacBook Pro", price: 11 },
   { sku: "atv", name: "Apple TV", price: 13 },
   { sku: "vga", name: "VGA adapter", price: 14 },
 ];
 
-const discounts: IDiscount[] = [
+const discounts: DiscountInterface[] = [
   {
     type: "bulk",
     sku: "ipd",
@@ -20,7 +20,7 @@ const discounts: IDiscount[] = [
     type: "bundle",
     sku: "atv",
     bundleSize: 3,
-    priceForBundle: 2,
+    priceForBundleItems: 2,
   },
 ];
 

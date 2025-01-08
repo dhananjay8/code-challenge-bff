@@ -1,11 +1,11 @@
-import { IDiscount } from "@interfaces/IDiscount";
+import { DiscountInterface } from "@interfaces/Discount";
 import { PricingRuleFactory } from "../core/lib/PricingRuleFactory";
 
 export class PricingRuleService {
   static applyDiscounts(
     items: Record<string, number>,
     prices: Record<string, number>,
-    discounts: IDiscount[]
+    discounts: DiscountInterface[]
   ): number {
     let total = 0;
 

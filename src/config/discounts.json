@@ -9,6 +9,6 @@
     "type": "bundle",
     "sku": "atv",
     "bundleSize": 3,
-    "priceForBundle": 2
+    "priceForBundleItems": 2
   }
 ]

@@ -1,10 +1,10 @@
-import { IPricingRule } from "../interfaces/IPricingRule";
-import { IDiscount } from "../interfaces/IDiscount";
+import { PricingRuleInterface } from "../interfaces/PricingRule";
+import { DiscountInterface } from "../interfaces/Discount";
 import { BulkDiscountRule } from "./BulkDiscountRule";
 import { BundleDiscountRule } from "./BundleDiscountRule";
 
 export class PricingRuleFactory {
-  static getRule(discount: IDiscount): IPricingRule {
+  static getRule(discount: DiscountInterface): PricingRuleInterface {
     switch (discount.type) {
       case "bulk":
         return new BulkDiscountRule();

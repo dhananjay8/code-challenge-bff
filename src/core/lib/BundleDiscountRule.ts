@@ -1,16 +1,16 @@
-import { IPricingRule } from "../interfaces/IPricingRule";
-import { IDiscount } from "../interfaces/IDiscount";
+import { PricingRuleInterface } from "../interfaces/PricingRule";
+import { DiscountInterface } from "../interfaces/Discount";
 
-export class BundleDiscountRule implements IPricingRule {
+export class BundleDiscountRule implements PricingRuleInterface {
   apply(
     items: Record<string, number>,
     prices: Record<string, number>,
-    discount: IDiscount
+    discount: DiscountInterface
   ): number {
     const count = items[discount.sku] || 0;
     const price = prices[discount.sku];
     const discountedCount =
-      Math.floor(count / discount.bundleSize!) * discount.priceForBundle! +
+      Math.floor(count / discount.bundleSize!) * discount.priceForBundleItems! +
       (count % discount.bundleSize!);
     return discountedCount * price;
   }
